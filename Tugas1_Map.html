@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+        align-items: center;
+       }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">My First Google Maps</h1>
+    <hr>
+    <h3 style="text-align: center">DWI PRATIWI PUTRI</h1>
+    <h4 style="text-align: center">L200150112</h1>
+    <h6 style="text-align: center">TUGAS 1 SISTEM INFORMASI GEOGRAFIS</h1>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -2.861830, lng: 108.287850};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 9.5,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSRZvO8AE-16OCLMvrDHh9UhelE7joUPk&callback=initMap">
+    </script>
+  </body>
+</html>
